@@ -14,7 +14,6 @@ import json
 import glob
 import numpy as np 
 from models.dummy_model import detect_brightness, detect_red_color
-from ModelManager  import ModelManager
 
 app = FastAPI()
 
