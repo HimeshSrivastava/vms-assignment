@@ -1,6 +1,8 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { useState, useEffect } from 'react';
 import StreamCard from './StreamCard';
+import {Api_Url} from './constants/Api.jsx';
+
 
 export default function StreamList() {
   const [results, setResults] = useState([]);
@@ -8,7 +10,7 @@ export default function StreamList() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await fetch('http://localhost:8000/results');
+        const response = await fetch(`${Api_Url}results`);
         const data = await response.json();
         setResults(data);
       } catch (error) {

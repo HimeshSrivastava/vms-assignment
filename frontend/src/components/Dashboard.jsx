@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import axios from "axios";
 import StreamList from "./StreamList";
 import { Box } from '@mui/material';
-import AlertPanel from "./AlertPanel";
+import {Api_Url} from "./constants/Api.jsx";
 
 const RecordVideo = () => {
   const [recording, setRecording] = useState(false);
@@ -45,7 +45,7 @@ const RecordVideo = () => {
     formData.append("file", blob, "recorded_video.webm");
 
     try {
-      const response = await axios.post("http://localhost:8000/upload", formData);
+      const response = await axios.post(`${Api_Url}upload`, formData);
       console.log("Video uploaded successfully", response.data);
       setAnalysisResult(response.data); 
     } catch (error) {
