@@ -1,0 +1,13 @@
+{
+    "stream_id": "0e04294f-f0be-4743-9aff-fe7179321a75",
+    "frame_number": 35,
+    "brightness": {
+        "average_brightness": 12.625466238839286,
+        "low_light": "True"
+    },
+    "red_alert": {
+        "red_pixel_ratio": 0.0,
+        "red_alert": "False"
+    },
+    "timestamp": "2025-08-05 10:36:00.720553"
+}
