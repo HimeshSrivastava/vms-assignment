@@ -67,19 +67,47 @@ const RecordVideo = () => {
         <button onClick={stopRecording}>Stop Recording</button>
       )}
       {analysisResult && (
-        <pre className="text-left bg-gray-100 p-4 rounded-md text">
-          {JSON.stringify(analysisResult, null, 2)}
-        </pre>
+        <Box
+  component="pre"
+  sx={{
+    textAlign: "left",
+    backgroundColor: "#1e1e1e",   // dark background
+    color: "#d4d4d4",             // light text
+    p: 2,
+    borderRadius: 2,
+    fontFamily: "monospace",
+    fontSize: "1rem",
+    maxHeight: 250,
+    overflow: "auto",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
+  }}
+>
+  {JSON.stringify(analysisResult, null, 2)}
+</Box>
       )}
     </div>
     {videoURL && <video src={videoURL} controls width={400} />}
   </Box>
-   <Box flex={1}>
-        <h1>AlertPanel </h1>
+   <Box flex={1} >
+        <h1 >AlertPanel </h1>
         {analysisResult && (
-          <pre className="text-left bg-gray-100 p-4 rounded-md">
-          {JSON.stringify(analysisResult.red_alert, null, 2)}
-        </pre>
+          <Box
+  component="pre"
+  sx={{
+    textAlign: "left",
+    backgroundColor: "#1e1e1e",   // dark background
+    color: "#d4d4d4",             // light text
+    p: 2,
+    borderRadius: 2,
+    fontFamily: "monospace",
+    fontSize: "1rem",
+    maxHeight: 250,
+    overflow: "auto",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
+  }}
+>
+  {JSON.stringify(analysisResult.red_alert, null, 2)}
+</Box>
         )}
       </Box>
 </Box>
