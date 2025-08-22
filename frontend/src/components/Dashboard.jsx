@@ -67,7 +67,7 @@ const RecordVideo = () => {
         <button onClick={stopRecording}>Stop Recording</button>
       )}
       {analysisResult && (
-        <pre className="text-left bg-gray-100 p-4 rounded-md">
+        <pre className="text-left bg-gray-100 p-4 rounded-md text">
           {JSON.stringify(analysisResult, null, 2)}
         </pre>
       )}
